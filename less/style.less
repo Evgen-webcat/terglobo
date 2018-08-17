@@ -5,12 +5,19 @@
 @import "anim";
 
 body {
+    color: #242424;
     font-family: GothamPro;
     font-size: .875rem;
 }
 
+.wow {
+    visibility: hidden;
+}
+
 .wrap {
     margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
 }
@@ -82,7 +89,6 @@ body {
         position: relative;
         z-index: 1;
         padding: 20px 20px 0;
-        box-sizing: border-box;
         .header_info {
             margin-left: 40px;
             color: #fff;
@@ -131,7 +137,7 @@ body {
 
 .qualities {
     margin: -70px auto 0;
-    padding: 0 30px;
+    padding: 0 20px;
     box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
@@ -202,10 +208,11 @@ body {
     box-sizing: border-box;
     &_caption {
         margin: 0 auto 50px;
-        color: #242424;
+        padding: 0 20px;
+        box-sizing: border-box;
         font-size: 3.437rem;
         font-family: GothamPro-Black;
-        max-width: 1140px;
+        max-width: 1200px;
     }
     &_block {
         position: relative;
@@ -239,6 +246,208 @@ body {
                 margin: -10px 0 0 -40px;
             }
         }
+    }
+}
+
+.company-desc {
+    position: relative;
+    margin-top: 70px;
+    &_bg {
+        position: absolute;
+        z-index: -1;
+        top: 110px;
+        left: 3%;
+        color: rgba(255, 255, 255, .1);
+        font-size: 185px;
+        font-family: GothamPro-Bold;
+        text-align: center;
+        vertical-align: bottom;
+        width: 800px;
+        height: 400px;
+        background-image: linear-gradient( 90deg, rgb(0, 174, 205) 0%, rgb(203, 196, 0) 100%);
+        overflow: hidden;
+        &_caption {
+            position: absolute;
+            left: 50%;
+            bottom: -45px;
+            transform: translateX(-50%);
+        }
+    }
+    .desc {
+        position: relative;
+        padding-top: 70px;
+        &_caption {
+            font-size: 3.437rem;
+            font-family: GothamPro-Black;
+        }
+        &_paragraph {
+            line-height: 1.5;
+            margin-top: 55px;
+            color: #fff;
+            font-size: 1.125rem;
+        }
+    }
+    .desc-slider {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        width: 700px;
+        height: 415px;
+        box-shadow: 0px 21px 46px 0px rgba(0, 0, 0, 0.32);
+        &_img {
+            width: 700px;
+            height: 415px;
+            object-fit: cover;
+        }
+    }
+}
+
+.employees {
+    padding: 200px 0 30px;
+    overflow: hidden;
+    &_caption {
+        font-size: 3.437rem;
+        font-family: GothamPro-Black;
+    }
+    &_slider {
+        width: 110%;
+        .slick-list {
+            padding: 70px 0;
+            .slick-slide {
+                margin: 0 20px;
+            }
+            div.slick-active:nth-last-of-type(1) {
+                opacity: .5;
+            }
+        }
+        &_block {
+            padding-bottom: 40px;
+            background-color: #fff;
+            box-shadow: 0px 10px 43px 0px rgba(0, 0, 0, 0.22);
+            &_img {
+                width: 100%;
+                height: 340px;
+                object-fit: cover;
+            }
+            &_caption {
+                position: relative;
+                z-index: 1;
+                margin-top: 30px;
+                padding: 0 15px 0 25px;
+                display: inline-block;
+                font-size: 1.25rem;
+                font-family: GothamPro-Bold;
+                &::after {
+                    content: '';
+                    z-index: -1;
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                    display: block;
+                    width: 100%;
+                    height: 7px;
+                    background-image: @gradient;
+                }
+            }
+            &_paragraph {
+                padding: 25px 25px 0;
+            }
+        }
+    }
+}
+
+.preference {
+    padding-bottom: 100px;
+    &_caption {
+        font-size: 3.437rem;
+        font-family: GothamPro-Black;
+    }
+    &_blocks {
+        margin-top: 50px;
+        padding: 0 0 0 10px;
+        display: flex;
+        justify-content: flex-start;
+        .preference_block {
+            position: relative;
+            margin-right: 10px;
+            width: ~"calc(33.333% - 10px)";
+            height: 560px;
+            background-color: #000;
+            &::after {
+                content: '';
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: @gradient;
+                opacity: 0;
+                transition: all .7s;
+            }
+            &_img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all .7s;
+            }
+            &_desc {
+                z-index: 3;
+                position: absolute;
+                left: 40px;
+                bottom: 70px;
+                color: #fff;
+                opacity: 0;
+                transition: all .7s;
+                &_caption {
+                    font-size: 3.125rem;
+                    font-family: GothamPro-Bold;
+                }
+                &_button {
+                    margin-top: 25px;
+                    display: block;
+                    width: 285px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-decoration: none;
+                    color: #fff;
+                    text-align: center;
+                    font-size: .812rem;
+                    font-family: GothamPro-Medium;
+                    text-transform: uppercase;
+                    border: 2px solid #fff;
+                    border-radius: 50px;
+                    background-color: rgba(255, 255, 255, .1);
+                    box-shadow: 0px 21px 46px 0px rgba(0, 0, 0, 0.14);
+                    transition: all .7s;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, .3);
+                    }
+                }
+            }
+            &:hover {
+                &::after {
+                    opacity: .6;
+                }
+                .preference_block_img {
+                    opacity: .8;
+                }
+                .preference_block_desc {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.review {
+    &_caption {
+        font-size: 3.437rem;
+        font-family: GothamPro-Black;
     }
 }
 
