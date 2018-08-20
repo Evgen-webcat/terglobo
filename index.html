@@ -13,7 +13,6 @@
 
 <body>
     <header class="header">
-        <div class="filter"></div>
         <div class="wrap">
             <div class="row">
                 <div class="container">
@@ -38,27 +37,29 @@
                     </div>
                 </div>
             </div>
-            <h1 class="header_caption"><span class="text_green">Пройди тест</span> из 5 вопросов и найди <br /> свой идеальный тур в Египет</h1>
-            <div class="icons">
-                <figure class="icon_block">
-                    <div><img src="img/bus.png" alt="icon" class="icon_block_img"></div>
-                    <figcaption class="icon_block_desc">+ скидку на <br /> трансфер в аэропорт</figcaption>
-                </figure>
-                <figure class="icon_block">
-                    <div><img src="img/heart-rate.png" alt="icon" class="icon_block_img"></div>
-                    <figcaption class="icon_block_desc">+ бесплатную страховку <br /> на 30 000$</figcaption>
-                </figure>
-                <figure class="icon_block">
-                    <div><img src="img/percentage.png" alt="icon" class="icon_block_img"></div>
-                    <figcaption class="icon_block_desc">+ рассроку платежа <br /> до 6 месяцев!</figcaption>
-                </figure>
-            </div>
-            <svg class="liquid-button test-button" data-text="НАЧАТЬ ТЕСТ" data-force-factor="0.1" data-layer-1-viscosity="0.5" data-layer-2-viscosity="0.4" data-layer-1-mouse-force="400" data-layer-2-mouse-force="500" data-layer-1-force-limit="1" data-layer-2-force-limit="2" data-color1="#00aecd" data-color2="#00aecd" data-color3="#ebe300" data-width="300" data-height="60">
+            <div class="header_content">
+                <h1 class="header_caption"><span class="text_green">Пройди тест</span> из 5 вопросов и найди <br /> свой идеальный тур в Египет</h1>
+                <div class="icons">
+                    <figure class="icon_block">
+                        <div><img src="img/bus.png" alt="icon" class="icon_block_img"></div>
+                        <figcaption class="icon_block_desc">+ скидку на <br /> трансфер в аэропорт</figcaption>
+                    </figure>
+                    <figure class="icon_block">
+                        <div><img src="img/heart-rate.png" alt="icon" class="icon_block_img"></div>
+                        <figcaption class="icon_block_desc">+ бесплатную страховку <br /> на 30 000$</figcaption>
+                    </figure>
+                    <figure class="icon_block">
+                        <div><img src="img/percentage.png" alt="icon" class="icon_block_img"></div>
+                        <figcaption class="icon_block_desc">+ рассроку платежа <br /> до 6 месяцев!</figcaption>
+                    </figure>
+                </div>
+                <svg class="liquid-button test-button" data-text="НАЧАТЬ ТЕСТ" data-force-factor="0.1" data-layer-1-viscosity="0.5" data-layer-2-viscosity="0.4" data-layer-1-mouse-force="400" data-layer-2-mouse-force="500" data-layer-1-force-limit="1" data-layer-2-force-limit="2" data-color1="#00aecd" data-color2="#00aecd" data-color3="#ebe300" data-width="300" data-height="60">
      <linearGradient id="linear-gradient">
     <stop offset="0%" stop-color="rgb(0,174,205)"/>
     <stop offset="100%" stop-color="rgb(235,227,0)"/>
   </linearGradient>
            </svg>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -205,22 +206,22 @@
                     <img src="img/preference_01.jpg" alt="preference" class="preference_block_img">
                     <div class="preference_block_desc">
                         <h3 class="preference_block_desc_caption">Полежать <br />на пляже</h3>
-                        <a href="#" class="preference_block_desc_button">подобрать варианты</a>
+                        <a href="#" class="preference_block_desc_button">подобрать варианты<img src="img/arrow-right.png" alt="arrow" class="button_arrow"></a>
                     </div>
                 </div>
                 <div class="preference_block">
                     <img src="img/preference_02.jpg" alt="preference" class="preference_block_img">
                     <div class="preference_block_desc">
                         <h3 class="preference_block_desc_caption">Постоять <br />на пляже</h3>
-                        <a href="#" class="preference_block_desc_button">подобрать варианты</a>
+                        <a href="#" class="preference_block_desc_button">подобрать варианты<img src="img/arrow-right.png" alt="arrow" class="button_arrow"></a>
                     </div>
                 </div>
                 <div class="preference_block">
                     <img src="img/preference_03.jpg" alt="preference" class="preference_block_img">
-                        <div class="preference_block_desc">
-                            <h3 class="preference_block_desc_caption">Посидеть <br />на пляже</h3>
-                            <a href="#" class="preference_block_desc_button">подобрать варианты</a>
-                        </div>
+                    <div class="preference_block_desc">
+                        <h3 class="preference_block_desc_caption">Посидеть <br />на пляже</h3>
+                        <a href="#" class="preference_block_desc_button">подобрать варианты<img src="img/arrow-right.png" alt="arrow" class="button_arrow"></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -228,9 +229,121 @@
             <div class="wrap">
                 <h2 class="review_caption">Отзывы о наших <br /><span class="caption_underline">специалистах</span></h2>
             </div>
+            <div class="review_slider">
+                <div class="review_slider_block">
+                    <h5 class="review_slider_block_caption">Игорь, отдыхал в 2018</h5>
+                    <p class="review_slider_block_paragraph">Мне категорически понравилось отдыхать вместе с компанией Терглобо, особенно благодарна специалисту Макаенок Марии Мариевне. Она подобрала просто волшебный тур, о котором мы будем вспоминать до конца своих дней. Отзывы желательно брать реальные, на крайняк воровать из России, но не писать самостоятельно, иначе это видно</p>
+                </div>
+                <div class="review_slider_block">
+                    <h5 class="review_slider_block_caption">Игорь, отдыхал в 2018</h5>
+                    <p class="review_slider_block_paragraph">Мне категорически понравилось отдыхать вместе с компанией Терглобо, особенно благодарна специалисту Макаенок Марии Мариевне. Она подобрала просто волшебный тур, о котором мы будем вспоминать до конца своих дней. Отзывы желательно брать реальные, на крайняк воровать из России, но не писать самостоятельно, иначе это видно</p>
+                </div>
+                <div class="review_slider_block">
+                    <h5 class="review_slider_block_caption">Игорь, отдыхал в 2018</h5>
+                    <p class="review_slider_block_paragraph">Мне категорически понравилось отдыхать вместе с компанией Терглобо, особенно благодарна специалисту Макаенок Марии Мариевне. Она подобрала просто волшебный тур, о котором мы будем вспоминать до конца своих дней. Отзывы желательно брать реальные, на крайняк воровать из России, но не писать самостоятельно, иначе это видно</p>
+                </div>
+                <div class="review_slider_block">
+                    <h5 class="review_slider_block_caption">Игорь, отдыхал в 2018</h5>
+                    <p class="review_slider_block_paragraph">Мне категорически понравилось отдыхать вместе с компанией Терглобо, особенно благодарна специалисту Макаенок Марии Мариевне. Она подобрала просто волшебный тур, о котором мы будем вспоминать до конца своих дней. Отзывы желательно брать реальные, на крайняк воровать из России, но не писать самостоятельно, иначе это видно</p>
+                </div>
+                <div class="review_slider_block">
+                    <h5 class="review_slider_block_caption">Игорь, отдыхал в 2018</h5>
+                    <p class="review_slider_block_paragraph">Мне категорически понравилось отдыхать вместе с компанией Терглобо, особенно благодарна специалисту Макаенок Марии Мариевне. Она подобрала просто волшебный тур, о котором мы будем вспоминать до конца своих дней. Отзывы желательно брать реальные, на крайняк воровать из России, но не писать самостоятельно, иначе это видно</p>
+                </div>
+            </div>
+        </section>
+        <section class="photo">
+            <div class="wrap">
+                <h2 class="photo_caption">Несколько фото с отдыха <br />
+                    <span class="caption_underline">туристов в Египте</span></h2>
+            </div>
+            <div class="photo_slider">
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+            </div>
+            <div class="photo_slider">
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+                <div class="photo_slider_block">
+                    <img src="img/photo.jpg" alt="photo" class="photo_slider_block_img">
+                </div>
+            </div>
+        </section>
+        <section class="promotions">
+            <div class="promotions_block">
+                <div class="promotions_block_content">
+                    <h5 class="promotions_block_content_caption">Горящая<br />акция!</h5>
+                    <p class="promotions_block_content_paragraph">Оставь заявку на тур в форме снизу<br /> и получи самые вкусные горящие<br /> туры себе на viber!<img src="img/viber.png" alt="viber" class="viber"></p>
+                    <div class="phone_form">
+                        <form action="send.php" method="post" id="phone_form">
+                            <input type="text" class="phone_input" placeholder="Ваш телефон" name="tel">
+                        </form>
+                        <svg class="liquid-button phone-button" data-text="ПОЛУЧИТЬ ГОРЯЩИЕ ТУРЫ!" data-force-factor="0.1" data-layer-1-viscosity="0.5" data-layer-2-viscosity="0.4" data-layer-1-mouse-force="400" data-layer-2-mouse-force="500" data-layer-1-force-limit="1" data-layer-2-force-limit="2" data-color1="#00aecd" data-color2="#00aecd" data-color3="#ebe300" data-width="290" data-height="60">
+     <linearGradient id="linear-gradient">
+    <stop offset="0%" stop-color="rgb(0,174,205)"/>
+    <stop offset="100%" stop-color="rgb(235,227,0)"/>
+  </linearGradient>
+           </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="promotions_picture">
+                <img src="img/promotions-image.jpg" alt="promotions-image" class="promotions_picture_image">
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="map" id="map"></div>
+            <div class="contacts_block">
+                <h3 class="contacts_block_caption">TerGlobo <br />(ТерГлобо)</h3>
+                <div class="contacts_wrap">
+                    <div class="contacts_wrap_image"><img src="img/phone.png" alt="phone"></div>
+                    <div class="contacts_wrap_text"><a href="tel:+375296035025">+375 29 603-50-25</a><br /><a href="tel:+375296035025">+375 29 603-50-25</a></div>
+                </div>
+                <div class="contacts_wrap">
+                    <div class="contacts_wrap_image"><img src="img/mail.png" alt="mail"></div>
+                    <div class="contacts_wrap_text"><a href="mailto:info@terglobo.by">info@terglobo.by</a></div>
+                </div>
+                <div class="contacts_wrap">
+                    <div class="contacts_wrap_image"><img src="img/clock.png" alt="clock"></div>
+                    <div class="contacts_wrap_text">пн-сб 10:00 - 20:00</div>
+                </div>
+                <div class="contacts_wrap">
+                    <div class="contacts_wrap_image"><img src="img/placemark.png" alt="placemark"></div>
+                    <div class="contacts_wrap_text">г. Минск, пр. Дзержинского<br />24-159</div>
+                </div>
+                <a href="#" class="contacts_block_button">ЗАКАЗАТЬ ЗВОНОК</a>
+            </div>
         </section>
     </main>
+    <footer class="footer">
+        <div>ООО “Терглобо” УНП 193101527</div>
+        <div>Разработано <a href="https://webcat.by" class="developer" target="_blank">webcat.by</a></div>
+    </footer>
     <script src="dist/dependencies.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1.68/?lang=ru_RU" type="text/javascript"></script>
     <script src="dist/app.js"></script>
 </body>
 

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\n    $('.desc-slider').slick();\n    \n    $('.employees_slider').slick({\n        arrows: false,\n        slidesToShow: 4,\n        swipeToSlide: true\n    });\n    \n   new wowjs.WOW().init();\n});\n\n\n//# sourceURL=webpack:///./js/app/app.js?");
+eval("$(document).ready(function () {\n    $('.desc-slider').slick();\n\n    $('.employees_slider').slick({\n        arrows: false,\n        slidesToShow: 4,\n        swipeToSlide: true\n    });\n    \n     $('.review_slider').slick({\n        arrows: false,\n        slidesToShow: 4,\n        swipeToSlide: true\n    });\n    \n    $('.photo_slider').slick({\n        arrows: false,\n        slidesToShow: 4,\n        swipeToSlide: true\n    });\n    \n    $('.phone_input').mask('+375 (99) 999-99-99');\n\n   if ($(window).width() > 1200) {\n       new wowjs.WOW().init();\n   };\n    \n    $('.phone-button').click(function () {\n        var value = $('.phone_input').val(),\n            phone_form = $('#phone_form').serialize();\n        if (value.length < 19) {\n            $('.phone_input').addClass('error');\n        } else {\n            $('.phone_input').removeClass('error');\n            console.log(phone_form);\n            $.ajax({\n                type: 'POST',\n                url: 'send.php',\n                data: phone_form,\n                success: function () {\n                    alert('Сообщение отправленно');\n                }\n            });\n        }\n    });\n});\n\n\n//# sourceURL=webpack:///./js/app/app.js?");
 
 /***/ }),
 
@@ -109,14 +109,25 @@ eval("\n\nvar _createClass = function () { function defineProperties(target, pro
 
 /***/ }),
 
+/***/ "./js/app/ymaps.js":
+/*!*************************!*\
+  !*** ./js/app/ymaps.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("$(document).ready(function () {\n    var mapBlock = document.getElementById('map');\n\n    if (mapBlock) {\n    ymaps.ready(init);\n    var map,\n        Placemark;\n\n    function init() {\n        map = new ymaps.Map(\"map\", {\n            center: [53.88847683, 27.529],\n            zoom: 15\n        });\n\n        map.behaviors.disable('scrollZoom');\n\n        Placemark = new ymaps.Placemark([53.888250, 27.517059], {\n            hintContent: 'TerGlobo',\n            balloonContent: 'TerGlobo'\n        }, {\n            iconLayout: 'default#image',\n            iconImageHref: 'img/ymaps-placemark.png',\n            iconImageSize: [52, 76]\n        });\n\n         map.geoObjects.add(Placemark);\n    }\n}\n});\n\n\n//# sourceURL=webpack:///./js/app/ymaps.js?");
+
+/***/ }),
+
 /***/ 0:
-/*!************************************************!*\
-  !*** multi ./js/app/app.js ./js/app/button.js ***!
-  \************************************************/
+/*!******************************************************************!*\
+  !*** multi ./js/app/app.js ./js/app/button.js ./js/app/ymaps.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./js/app/app.js */\"./js/app/app.js\");\nmodule.exports = __webpack_require__(/*! ./js/app/button.js */\"./js/app/button.js\");\n\n\n//# sourceURL=webpack:///multi_./js/app/app.js_./js/app/button.js?");
+eval("__webpack_require__(/*! ./js/app/app.js */\"./js/app/app.js\");\n__webpack_require__(/*! ./js/app/button.js */\"./js/app/button.js\");\nmodule.exports = __webpack_require__(/*! ./js/app/ymaps.js */\"./js/app/ymaps.js\");\n\n\n//# sourceURL=webpack:///multi_./js/app/app.js_./js/app/button.js_./js/app/ymaps.js?");
 
 /***/ })
 
