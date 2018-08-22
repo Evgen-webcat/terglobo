@@ -87,6 +87,7 @@ body {
         position: relative;
         z-index: 1;
         padding: 20px 20px 0;
+        height: 100%;
         .header_info {
             margin-left: 40px;
             color: #fff;
@@ -106,8 +107,16 @@ body {
             font-family: GothamPro-Medium;
         }
     }
+    &_content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
     &_caption {
-        margin-top: 175px;
         text-align: center;
         font-size: 3.125rem;
         color: #fff;
@@ -250,20 +259,41 @@ body {
 .company-desc {
     position: relative;
     margin-top: 70px;
+    padding-top: 70px;
+    height: 400px;
     &_bg {
         position: absolute;
-        z-index: -1;
-        top: 110px;
-        left: 3%;
+        right: 50%;
+        transform: translateX(130px);
+        margin-top: -20px;
+        z-index: -3;
         color: rgba(255, 255, 255, .1);
         font-size: 185px;
         font-family: GothamPro-Bold;
         text-align: center;
         vertical-align: bottom;
-        width: 800px;
+        width: 750px;
         height: 400px;
         background-image: linear-gradient( 90deg, rgb(0, 174, 205) 0%, rgb(203, 196, 0) 100%);
         overflow: hidden;
+        .desc {
+            position: relative;
+            padding-top: 70px;
+            &_caption {
+                margin-top: 70px;
+                font-size: 3.437rem;
+                font-family: GothamPro-Black;
+            }
+            &_paragraph {
+                padding: 0 300px 0 65px;
+                box-sizing: border-box;
+                line-height: 1.5;
+                text-align: left;
+                color: #fff;
+                font-size: 1.125rem;
+                font-family: GothamPro;
+            }
+        }
         &_caption {
             position: absolute;
             left: 50%;
@@ -271,24 +301,15 @@ body {
             transform: translateX(-50%);
         }
     }
-    .desc {
-        position: relative;
-        padding-top: 70px;
-        &_caption {
-            font-size: 3.437rem;
-            font-family: GothamPro-Black;
-        }
-        &_paragraph {
-            line-height: 1.5;
-            margin-top: 55px;
-            color: #fff;
-            font-size: 1.125rem;
-        }
+    .desc_caption {
+        font-size: 3.437rem;
+        font-family: GothamPro-Black;
     }
     .desc-slider {
         position: absolute;
         top: 0;
-        right: 5%;
+        left: 50%;
+        transform: translateX(-100px);
         width: 700px;
         height: 415px;
         box-shadow: 0px 21px 46px 0px rgba(0, 0, 0, 0.32);
@@ -301,7 +322,7 @@ body {
 }
 
 .employees {
-    padding: 200px 0 30px;
+    padding: 150px 0 30px;
     overflow: hidden;
     &_caption {
         font-size: 3.437rem;
@@ -362,6 +383,7 @@ body {
         padding: 0 0 0 10px;
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
         .preference_block {
             position: relative;
             margin-right: 10px;
@@ -655,6 +677,154 @@ body {
         &:hover {
             color: lighten(#00adbc, 10%);
         }
+    }
+}
+
+.slick-slide {
+    transition: opacity .7s;
+}
+
+.slick-slide.slick-current + .slick-active + .slick-active + .slick-active {
+    opacity: .3;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.locker {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+
+.close_btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: #d9d9d9;
+    }
+    &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+.submit {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.modal_form {
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    .form_name_input,
+    .form_phone_input {
+        margin-bottom: 20px;
+        width: 260px;
+        padding: 20px 45px;
+        box-sizing: border-box;
+        font-family: GothamPro;
+        border: 1px solid #d9d9d9;
+        border-radius: 50px;
+        background-color: #f2f2f2;
+        outline: none;
+    }
+    .name-button {
+        margin: -25px 0 -40px -40px;
+    }
+}
+
+.modal_test {
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    .question {
+        display: none;
+        &_caption {
+            font-size: 1.25rem;
+            font-family: GothamPro-Bold;
+        }
+        &_paragraph {
+            margin-top: 20px;
+            font-size: 1.25rem;
+        }
+        &_form {
+            margin: 20px 0 30px;
+            .label {
+                display: block;
+                margin-bottom: 10px;
+                text-align: left;
+                cursor: pointer;
+            }
+        }
+    }
+    .question_active {
+        display: block;
+    }
+    .prev_question,
+    .next_question {
+        visibility: hidden;
+        cursor: pointer;
+    }
+    .button_visible {
+        visibility: visible;
+    }
+    .test_name_input,
+    .test_phone_input {
+        margin-bottom: 20px;
+        width: 260px;
+        padding: 20px 45px;
+        box-sizing: border-box;
+        font-family: GothamPro;
+        border: 1px solid #d9d9d9;
+        border-radius: 50px;
+        background-color: #f2f2f2;
+        outline: none;
+    }
+    .test-form-button {
+        margin: -25px 0 -40px -45px;
     }
 }
 

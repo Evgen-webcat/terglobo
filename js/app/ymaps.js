@@ -9,7 +9,7 @@ $(document).ready(function () {
     function init() {
         map = new ymaps.Map("map", {
             center: [53.88847683, 27.529],
-            zoom: 15
+            zoom: 12
         });
 
         map.behaviors.disable('scrollZoom');

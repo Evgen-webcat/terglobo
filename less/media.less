@@ -1,5 +1,222 @@
 //out: null
+@media (max-width: 1280px) {
+    .company-desc_bg {
+        transform: translateX(155px);
+    }
+    .company-desc .desc-slider {
+        transform: translateX(-110px);
+    }
+}
 
 @media (max-width: 1200px) {
+    .header_caption,
+    .resort_caption,
+    .employees_caption,
+    .preference_caption,
+    .review_caption,
+    .photo_caption {
+        font-size: 2.5rem;
+    }
+    .caption_underline::after {
+        bottom: 3px;
+        height: 5px;
+    }
+    .header_info {
+        display: none;
+    }
+    .company-desc {
+        position: relative;
+        margin-top: 0;
+        padding-top: 70px;
+        height: auto;
+        &_bg {
+            position: relative;
+            right: auto;
+            transform: translateX(0);
+            width: 100%;
+            height: auto;
+            .desc {
+                padding: 50px 10px;
+                &_paragraph {
+                    padding: 0 20px;
+                    text-align: center;
+                }
+            }
+        }
+        .desc-slider {
+            position: relative;
+            left: auto;
+            transform: translateX(0);
+            width: 100%;
+            &_img {
+                width: 100%;
+            }
+        }
+    }
+    .employees {
+        padding: 100px 0 30px;
+    }
+    .qualities {
+        .row {
+            justify-content: space-around;
+        }
+    }
+    .qualities_block {
+        margin-bottom: 20px;
+    }
+    .contacts_block {
+        position: static;
+        padding: 50px;
+        width: 100%;
+        height: auto;
+    }
+    .preference_blocks .preference_block {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
 
+@media (max-width: 1023px) {
+    .header {
+        .icons {
+            margin-top: 30px;
+        }
+        .test-button {
+            margin: 0 auto;
+        }
+        &_content {
+            transform: translate(-50%, -50%);
+        }
+    }
+    .resort_block {
+        width: 100%;
+        height: 500px;
+    }
+    .promotions_block {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .promotions_picture {
+        display: none;
+    }
+    .address {
+        display: none;
+    }
+}
+
+@media (max-width: 599px) {
+    .footer {
+        padding: 0 20px;
+        flex-direction: column;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .employees_slider {
+        width: 100%;
+        .slick-list {
+            padding: 70px 10px;
+        }
+    }
+    .review_slider {
+        width: 100%;
+        .slick-list {
+            padding: 100px 10px;
+        }
+    }
+    .photo_slider {
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        overflow: hidden;
+        .logo {
+            width: 130px;
+        }
+        .wrap {
+            .phone {
+                margin-left: 0;
+            }
+            .phone_img {
+                display: none;
+            }
+        }
+        .test-button {
+            transform: scale(.8);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -115px;
+        }
+    }
+    .header_caption,
+    .resort_caption,
+    .employees_caption,
+    .preference_caption,
+    .review_caption,
+    .photo_caption {
+        font-size: 2rem;
+    }
+    .preference_blocks .preference_block {
+        height: 350px;
+        &_desc {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .resort_block_content {
+        padding: 0 10px;
+        box-sizing: border-box;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        .advice-button {
+            transform: scale(.8);
+        }
+    }
+    .resort {
+        margin-top: 30px;
+    }
+    .contacts_block {
+        padding: 10px;
+    }
+    .employees {
+        padding: 50px 0 0;
+    }
+    .preference {
+        padding-bottom: 50px;
+    }
+    .photo {
+        padding: 50px 0 0;
+    }
+    .promotions {
+        padding-bottom: 0;
+        &_block {
+            width: 94%;
+            &_content {
+                width: 100%;
+                .phone_form {
+                    padding: 10px 5px;
+                    width: 300px;
+                    overflow: hidden;
+                }
+                &_caption {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .icons {
+        flex-direction: column;
+        .icon_block_img {
+            display: none;
+        }
+    }
 }
