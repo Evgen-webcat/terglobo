@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("window.jQuery = window.$ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nwindow.wowjs = __webpack_require__(/*! wowjs */ \"./node_modules/wowjs/dist/wow.js\");\n__webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n__webpack_require__(/*! ./jquery.maskedinput.min.js */ \"./js/jquery.maskedinput.min.js\");\n__webpack_require__(/*! jquery-validation */ \"./node_modules/jquery-validation/dist/jquery.validate.js\");\n\n//# sourceURL=webpack:///./js/dependencies.js?");
+eval("window.jQuery = window.$ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nwindow.wowjs = __webpack_require__(/*! wowjs */ \"./node_modules/wowjs/dist/wow.js\");\n__webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n__webpack_require__(/*! ./jquery.maskedinput.min.js */ \"./js/jquery.maskedinput.min.js\");\n__webpack_require__(/*! jquery-validation */ \"./node_modules/jquery-validation/dist/jquery.validate.js\");\n\n\n//# sourceURL=webpack:///./js/dependencies.js?");
 
 /***/ }),
 

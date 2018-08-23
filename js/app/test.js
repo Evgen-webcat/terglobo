@@ -10,7 +10,7 @@ $(document).ready(function () {
             $('.prev_question').addClass('button_visible');
         }
         if (currentQuestion == $('.question').length - 1) {
-            $('.next_question').removeClass('button_visible');
+            $('.next_question, .prev_question').css('display', 'none');
             }
     });
 

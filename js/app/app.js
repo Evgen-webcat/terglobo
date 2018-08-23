@@ -1,83 +1,4 @@
 $(document).ready(function () {
-    $('.desc-slider').slick();
-
-    $('.employees_slider').slick({
-        arrows: false,
-        slidesToShow: 4,
-        swipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3
-                }
-    },
-            {
-                breakpoint: 900,
-                settings: {
-                    slidesToShow: 2
-                }
-    },
-            {
-                breakpoint: 501,
-                settings: {
-                    slidesToShow: 1
-                }
-    }]
-    });
-
-    $('.review_slider').slick({
-        arrows: false,
-        slidesToShow: 4,
-        swipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3
-                }
-    },
-            {
-                breakpoint: 900,
-                settings: {
-                    slidesToShow: 2
-                }
-    },
-            {
-                breakpoint: 501,
-                settings: {
-                    slidesToShow: 1
-                }
-    }]
-    });
-
-    $('.photo_slider').slick({
-        arrows: false,
-        slidesToShow: 4,
-        swipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3
-                }
-    },
-            {
-                breakpoint: 900,
-                settings: {
-                    slidesToShow: 2
-                }
-    },
-            {
-                breakpoint: 501,
-                settings: {
-                    slidesToShow: 1
-                }
-    }]
-    });
-
-    $('.phone_input, .form_phone_input, .test_phone_input').mask('+375 (99) 999-99-99');
-
     if ($(window).width() > 1200) {
         new wowjs.WOW().init();
     };
@@ -95,7 +16,7 @@ $(document).ready(function () {
                 url: 'send-phone.php',
                 data: phone_form,
                 success: function () {
-
+                    window.location.href = 'thanks.html';
                 }
             });
         }
@@ -126,9 +47,7 @@ $(document).ready(function () {
                 url: 'send-name.php',
                 data: form,
                 success: function () {
-                    $('body').removeClass('modal-open');
-                    $('.locker').fadeOut();
-                    $('.modal_form').fadeOut();
+                    window.location.href = 'thanks.html';
                 }
             });
         }
@@ -159,11 +78,15 @@ $(document).ready(function () {
                 url: 'send-test.php',
                 data: form,
                 success: function () {
-                    $('body').removeClass('modal-open');
-                    $('.locker').fadeOut();
-                    $('.modal_test').fadeOut();
+                   window.location.href = 'thanks.html';
                 }
             });
         }
+    });
+    $('.locker').click(function () {
+        $('body').removeClass('modal-open');
+        $('.locker').fadeOut();
+        $('.modal_test').fadeOut();
+        $('.modal_form').fadeOut();
     });
 });

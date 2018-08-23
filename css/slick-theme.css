@@ -5,6 +5,10 @@
     background: #fff url('./ajax-loader.gif') center center no-repeat;
 }
 
+.slick-slide {
+    outline: none;
+}
+
 /* Icons */
 @font-face
 {
@@ -29,6 +33,8 @@
     border: none;
     outline: none;
     background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 
@@ -57,7 +63,7 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -25px;
+    bottom: 25px;
 
     display: block;
 
@@ -113,7 +119,7 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 30px;
     line-height: 20px;
 
     position: absolute;
@@ -136,4 +142,9 @@
 {
     opacity: .75;
     color: black;
+}
+
+.photo_slider .slick-dots
+{
+    bottom: -25px;
 }
