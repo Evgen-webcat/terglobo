@@ -47,14 +47,17 @@ body {
 }
 
 .button {
-    display: block;
+    display: inline-block;
+    padding: 0;
     color: #fff;
     text-align: center;
     font-family: GothamPro-Medium;
     text-transform: uppercase;
     text-decoration: none;
+    border: none;
     border-radius: 50px;
-    background-image: @gradient;
+    background-color: transparent;
+    outline: none;
 }
 
 .caption_underline {
@@ -74,6 +77,7 @@ body {
 }
 
 .liquid-button {
+    margin: -40px;
     cursor: pointer;
 }
 
@@ -104,6 +108,7 @@ body {
         }
         .phone {
             margin-left: 70px;
+            line-height: 28px;
             font-family: GothamPro-Medium;
             &_button {
                 color: #fff;
@@ -128,6 +133,14 @@ body {
         font-size: 3.125rem;
         color: #fff;
         font-family: GothamPro-Black;
+        text-transform: uppercase;
+    }
+    &_paragraph {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 2rem;
+        color: #fff;
+        font-family: GothamPro;
         text-transform: uppercase;
     }
     .icons {
@@ -256,8 +269,8 @@ body {
                 margin-top: 25px;
                 font-size: 2.437rem;
             }
-            .advice-button {
-                margin: -10px 0 0 -40px;
+            .button {
+                margin-top: 30px;
             }
         }
     }
@@ -534,7 +547,7 @@ body {
             margin: 0 7.5px;
         }
         &_block {
-            height: 260px;
+            height: 350px;
             &_img {
                 width: 100%;
                 height: 100%;
@@ -591,7 +604,7 @@ body {
                     outline: none;
                 }
                 .phone-button {
-                    margin: -25px 0 -40px -40px;
+                    margin-top: 15px;
                 }
             }
         }
@@ -770,6 +783,11 @@ body {
     padding: 50px;
     box-sizing: border-box;
     text-align: center;
+    &_caption {
+        margin-bottom: 20px;
+        font-size: 1.25rem;
+        font-family: GothamPro-Bold;
+    }
     .form_name_input,
     .form_phone_input {
         margin-bottom: 20px;
@@ -781,9 +799,6 @@ body {
         border-radius: 50px;
         background-color: #f2f2f2;
         outline: none;
-    }
-    .name-button {
-        margin: -40px;
     }
 }
 
@@ -859,9 +874,6 @@ body {
         outline: none;
         visibility: hidden;
         cursor: pointer;
-        .question-button {
-            margin: -40px;
-        }
     }
     .button_visible {
         visibility: visible;
@@ -877,9 +889,6 @@ body {
         border-radius: 50px;
         background-color: #f2f2f2;
         outline: none;
-    }
-    .test-form-button {
-        margin: -40px;
     }
 }
 

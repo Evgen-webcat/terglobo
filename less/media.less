@@ -9,6 +9,24 @@
 }
 
 @media (max-width: 1200px) {
+    .button {
+        position: relative;
+        height: 60px;
+        background-image: @gradient;
+        &::after {
+            content: attr(text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            font-family: GothamPro-Medium;
+        }
+        .liquid-button {
+            visibility: hidden;
+        }
+    }
     .header_caption,
     .resort_caption,
     .employees_caption,
@@ -16,6 +34,9 @@
     .review_caption,
     .photo_caption {
         font-size: 2.5rem;
+    }
+    .header_paragraph {
+        font-size: 1rem;
     }
     .caption_underline::after {
         bottom: 3px;
@@ -57,12 +78,7 @@
         padding: 100px 0 30px;
     }
     .qualities {
-        .row {
-            justify-content: space-around;
-        }
-    }
-    .qualities_block {
-        margin-bottom: 20px;
+        display: none;
     }
     .contacts_block {
         position: static;
@@ -80,9 +96,6 @@
             opacity: 1;
         }
     }
-    .photo_slider_additional {
-        display: none;
-    }
 }
 
 @media (max-width: 1023px) {
@@ -91,7 +104,7 @@
             margin-top: 30px;
         }
         .test-button {
-            margin: 0 auto;
+            margin: 30px auto 0;
         }
         &_content {
             transform: translate(-50%, -50%);
@@ -192,7 +205,7 @@
     .preference_caption,
     .review_caption,
     .photo_caption {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .preference_blocks .preference_block {
         height: 350px;
@@ -205,15 +218,14 @@
         }
     }
     .resort_block_content {
-        padding: 0 10px;
+        padding: 0 5px;
         box-sizing: border-box;
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
-        .advice-button {
-            margin-left: 50%;
-            transform: scale(.8) translateX(-62%);
+        .button {
+            margin: 30px auto 0;
         }
     }
     .resort {
