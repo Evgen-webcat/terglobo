@@ -19,7 +19,7 @@ $(document).ready(function () {
 
             Placemark = new ymaps.Placemark([53.888250, 27.517059], {
                 hintContent: 'TerGlobo',
-                balloonContent: 'TerGlobo'
+                balloonContent: 'TerGlobo <br /> +375 29 177-73-02 <br /> info@terglobo.by <br /> пн-пт 10:00 - 20:00 <br />  сб-вс 11:00 - 17:00 <br /> г. Минск, пр. Дзержинского 24-159а'
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/ymaps-placemark.png',

@@ -26,14 +26,14 @@ $(document).ready(function () {
         event.preventDefault();
         $('body').addClass('modal-open');
         $('.locker').fadeIn();
-        $('.modal_form').fadeIn();
+        $('.modal_form').css('display', 'block');
     });
 
     $('.close_form_btn').click(function (event) {
         event.preventDefault();
         $('body').removeClass('modal-open');
         $('.locker').fadeOut();
-        $('.modal_form').fadeOut();
+        $('.modal_form').css('display', 'none');
     });
 
     $('#name_form').validate({
@@ -57,14 +57,14 @@ $(document).ready(function () {
         event.preventDefault();
         $('body').addClass('modal-open');
         $('.locker').fadeIn();
-        $('.modal_test').fadeIn();
+        $('.modal_test').css('display', 'block');
     });
 
     $('.close_test_btn').click(function (event) {
         event.preventDefault();
         $('body').removeClass('modal-open');
         $('.locker').fadeOut();
-        $('.modal_test').fadeOut();
+        $('.modal_test').css('display', 'none');
     });
 
     $('#test_form').validate({
@@ -86,7 +86,7 @@ $(document).ready(function () {
     $('.locker').click(function () {
         $('body').removeClass('modal-open');
         $('.locker').fadeOut();
-        $('.modal_test').fadeOut();
-        $('.modal_form').fadeOut();
+        $('.modal_test').css('display', 'none');
+        $('.modal_form').css('display', 'none');
     });
 });
